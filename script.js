@@ -2,16 +2,21 @@ const question = document.querySelectorAll('.flex-question')
 const answer = document.querySelectorAll('.answer')
 const icon = document.querySelectorAll('.icon')
 
+
 question.forEach((question, i) => {
     question.addEventListener('click', () => {
-        answer[i].classList.toggle('show')
+        const isAlreadyOpen = answer[i].classList.contains('show');
 
-        const isShown = answer[i].classList.contains('show');
+        answer.forEach((answer, index) => {
+            answer.classList.remove('show');
+            icon[index].src = 'images/icon-plus.svg';
+        });
 
-        icon[i].src = isShown
-            ? 'images/icon-plus.svg'
-            : 'images/icon-minus.svg';
+        if (!isAlreadyOpen) {
+            answer[i].classList.add('show');
+            icon[i].src = 'images/icon-minus.svg';
+        }
 
-            icon[i].classList.toggle('rotate')
-    })
-})
+        icon[i].classList.toggle('rotate')
+    });
+});

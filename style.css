@@ -7,6 +7,7 @@ body {
     background-color: hsl(275, 100%, 97%);
     font-family: "Work Sans", sans-serif;
     min-height: 100vh;
+    scroll-behavior: smooth;
 }
 
 .background {
@@ -19,12 +20,18 @@ body {
 .card {
     background-color: hsl(0, 100%, 100%);
     max-width: max-content;
-    padding: 40px;
+    padding: 10px 20px;
     border-radius: 20px;
     position: absolute;
     top: 20%;
     left: 27%;
-    box-shadow: 1px 9px 5px hsl(294, 13%, 55%);
+    box-shadow: 1px 6px 5px hsl(295, 7%, 61%);
+}
+
+.line{
+    width: 100%;
+    border: 2px solid hsl(275, 100%, 97%);
+    margin-bottom: 1.3rem;
 }
 
 .heading {
@@ -75,13 +82,14 @@ body {
     font-size: 1.1rem;
     line-height: 1.5;
     margin-bottom: 2rem;
-}
-
-.show {
     display: none;
 }
 
-@media (max-width: 760px) and (max-width: 1024px) {
+.answer.show {
+    display: block;
+}
+
+@media (max-width: 1024px) {
     .background {
         min-height: 30vh;
         background-image: url(images/background-pattern-mobile.svg);
@@ -90,7 +98,7 @@ body {
     }
 
     .card {
-        padding: 30px;
+        padding: 10px 20px;
         border-radius: 20px;
         position: absolute;
         top: 20%;
