@@ -20,13 +20,11 @@ body {
 .card {
     background-color: hsl(0, 100%, 100%);
     max-width: max-content;
-    padding: 10px 20px;
+    padding: 20px;
     border-radius: 20px;
     position: absolute;
     top: 20%;
-    left: 27%;
-    /* margin-inline: auto;
-    margin-top: -9rem; */
+    left: 29%;
     box-shadow: 1px 6px 5px hsl(295, 7%, 61%);
 }
 
@@ -56,7 +54,7 @@ body {
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.3rem;
 }
 
 .flex-question h3 {
